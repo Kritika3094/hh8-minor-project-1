@@ -29,16 +29,6 @@ The website allows users to enter input into form fields, which are then directl
 
 ---
 
-## 🛠️ Technologies Used
-- **Frontend:** HTML
-- **Backend:** PHP
-- **Database:** MySQL (MariaDB via XAMPP)
-- **Web Server:** Apache
-- **Development Environment:** XAMPP
-- **Version Control:** Git & GitHub
-
----
-
 ## ⚙️ How to Run the Project
 1. Install **XAMPP** and start Apache and MySQL
 2. Clone or download this repository
