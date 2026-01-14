@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Login - SQL Injection Demo</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    
     <style>
         body { font-family: Arial; background: #f4f6f8; }
         .box {

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Preventing SQL Injection</title>
-    <link rel="stylesheet" href="css/style.css">
+   
 
     <style>
        

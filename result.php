@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Login Result</title>
-    <link rel="stylesheet" href="css/style.css">
+    
 
     <style>
         body { font-family: Arial; background: #eef2f3; }
