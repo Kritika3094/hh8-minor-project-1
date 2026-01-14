@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>SQL Injection Vulnerability Sandbox</title>
+
+
     <style>
         body {
             font-family: Arial, sans-serif;

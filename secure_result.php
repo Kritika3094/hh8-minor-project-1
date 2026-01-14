@@ -23,19 +23,7 @@ $result = $stmt->get_result();
 
 
     <title>Secure Login Result</title>
-    <style>
-        body { font-family: Arial; background: #f4f6f8; }
-        .box {
-            width: 450px;
-            margin: 100px auto;
-            padding: 25px;
-            background: white;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .success { color: green; }
-        .fail { color: red; }
-    </style>
+    
 </head>
 
 <body>
