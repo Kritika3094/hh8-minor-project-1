@@ -2,7 +2,11 @@
 <html>
 <head>
     <title>Preventing SQL Injection</title>
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
+       
+
         body { font-family: Arial; background: #f4f6f8; }
         .box {
             width: 700px;

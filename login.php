@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Login - SQL Injection Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
         body { font-family: Arial; background: #f4f6f8; }
         .box {
@@ -24,14 +26,22 @@
 <body>
 <div class="box">
     <h2>Login</h2>
+    <script>
+function showInfo() {
+    alert("This page is intentionally vulnerable for learning purposes.");
+}
+</script>
+
     <p class="warning">
+
         ⚠ This login page is intentionally vulnerable to SQL Injection
     </p>
 
     <form method="POST" action="result.php">
         <input type="text" name="username" placeholder="Enter username" required>
         <input type="text" name="password" placeholder="Enter password" required>
-        <button type="submit">Login</button>
+        <button onclick="showInfo()">Why is this vulnerable?</button>
+
     </form>
 </div>
 </body>

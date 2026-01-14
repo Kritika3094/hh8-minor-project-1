@@ -19,7 +19,9 @@ $result = $stmt->get_result();
 
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="css/style.css">
+
+
     <title>Secure Login Result</title>
     <style>
         body { font-family: Arial; background: #f4f6f8; }
