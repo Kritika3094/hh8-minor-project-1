@@ -13,6 +13,8 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Login Result</title>
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
         body { font-family: Arial; background: #eef2f3; }
         .box {
@@ -34,6 +36,8 @@ $result = mysqli_query($conn, $query);
         }
         th { background: #f0f0f0; }
         a { display: inline-block; margin-top: 15px; }
+       
+
     </style>
 </head>
 
