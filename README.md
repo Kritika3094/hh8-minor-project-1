@@ -57,8 +57,38 @@ http://localhost/phpmyadmin
 5. Create a database named:
 ```sql
 vuln_sandbox
-Import the file database.sql to create tables and insert sample data
-
-Open the application in a browser:
-
+6. Import the file database.sql to create tables and insert sample data
+7. Open the application in a browser:
 http://localhost/hh8-minor-project-1/login.php
+
+### *SQL Injection Techniques Demonstrated*
+1. Error-Based SQL Injection
+Error-based SQL Injection occurs when database error messages are displayed to the user, allowing attackers to gain information about the database structure.
+Demonstration Location:
+Search functionality
+Vulnerable result pages
+Example Payload:
+' ORDER BY 5--
+Explanation:
+Improper handling of user input causes SQL errors to be displayed, which can be exploited to understand database behavior.
+
+### 2. Blind SQL Injection (Boolean-Based)
+Blind SQL Injection occurs when the application does not display database errors or data directly, but behaves differently based on injected conditions.
+Demonstration Location:
+Login functionality
+Example Payloads:
+admin' AND '1'='1   → Login Successful
+admin' AND '1'='2   → Login Failed
+Explanation:
+The attacker infers database responses based on application behavior such as login success or failure.
+
+Vulnerable Implementation
+In the vulnerable login, user input is directly concatenated into the SQL query:
+SELECT * FROM users WHERE username = '$username' AND password = '$password';
+This allows attackers to manipulate query logic and bypass authentication.
+SQL Injection Prevention
+The secure implementation uses prepared statements, which prevent SQL Injection by separating SQL logic from user input.
+SELECT * FROM users WHERE username = ? AND password = ?
+
+
+In this implementation, SQL Injection payloads are treated as plain data, causing the attack to fail.
