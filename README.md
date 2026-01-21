@@ -1,61 +1,81 @@
 # SQL Injection Vulnerability Sandbox
 
-# SQL Injection Vulnerability Sandbox
+## Description / Overview
+The **SQL Injection Vulnerability Sandbox** is a simple web-based project created to demonstrate how SQL Injection attacks occur in vulnerable web applications and how they can be prevented using secure coding practices.
 
-## Project Overview
-The **SQL Injection Vulnerability Sandbox** is a web-based educational project developed to demonstrate how SQL Injection vulnerabilities occur in web applications and how they can be prevented using secure coding practices.
+The project is implemented as a website using **PHP and MySQL**, where certain parts of the application intentionally handle user input insecurely to demonstrate SQL Injection attacks. A secure implementation is also included to show how the same attacks can be prevented.
 
-The project is implemented as a **website using PHP and MySQL**, where user input is intentionally handled insecurely in certain parts to demonstrate SQL Injection attacks, followed by a secure implementation that prevents such attacks. This helps in understanding both the attack mechanism and its mitigation.
-
----
-
-## Objective
-The objectives of this project are:
-- To understand how unsanitized user input leads to SQL Injection vulnerabilities
-- To demonstrate different types of SQL Injection attacks
-- To show how attackers can bypass authentication mechanisms
-- To explain the difference between vulnerable and secure implementations
-- To implement and demonstrate SQL Injection prevention techniques
+This project is intended for **educational and learning purposes**.
 
 ---
 
-## Application Flow
-Vulnerable Login Page → SQL Injection Demonstration
-↓
-Prevention Explanation Page
-↓
-Secure Login (Injection Prevented)
-
+## Features
+- Vulnerable login functionality
+- Demonstration of Error-based SQL Injection
+- Demonstration of Blind SQL Injection (Boolean-based)
+- Secure login using prepared statements
+- Clear comparison between vulnerable and secure implementations
 
 ---
 
 ## Technologies Used
-- **Frontend:** HTML, CSS
-- **Backend:** PHP
-- **Database:** MySQL / MariaDB
-- **Web Server:** Apache (XAMPP)
-- **Version Control:** Git & GitHub
-- **Development Tool:** VS Code
+- **Frontend:** HTML, CSS  
+- **Backend:** PHP  
+- **Database:** MySQL / MariaDB  
+- **Web Server:** Apache (XAMPP)  
+- **Editor:** Visual Studio Code  
+- **Version Control:** Git & GitHub  
 
 ---
 
-## How to Run the Project
-
-This project requires a local server environment to execute PHP and MySQL.
+## Installation / Setup
 
 ### Prerequisites
+Make sure the following are installed on your system:
 - XAMPP (Apache + MySQL)
-- Web Browser (Chrome / Edge)
-- Git (optional)
+- Visual Studio Code
+- Web browser (Chrome / Edge)
 
-### Setup Steps
-1. Download or clone this repository
-2. Place the project folder inside:C:\xampp\htdocs\
-3. Start **Apache** and **MySQL** from the XAMPP Control Panel
-4. Open phpMyAdmin:
-http://localhost/phpmyadmin
-5. Create a database named:
+---
+
+### Step-by-Step Setup
+
+1. Clone or download the repository from GitHub
+2. Move the project folder to:
+   C:\xampp\htdocs\
+3. Open **XAMPP Control Panel**
+4. Start **Apache** and **MySQL**
+5. Open **phpMyAdmin** in the browser:
+   http://localhost/phpmyadmin
+6. Create a new database:
 ```sql
-vuln_sandbox
+CREATE DATABASE vuln_sandbox;
+7.Import the file database.sql to create tables and insert sample data
 
-ck to fail.
+How to Run the Project
+
+1. Open VS Code
+
+2. Click File → Open Folder
+
+3. Select:
+
+C:\xampp\htdocs\hh8-minor-project-1
+
+
+4. Open a browser and run the application:
+
+http://localhost/hh8-minor-project-1/login.php
+
+Usage
+Vulnerable Login (SQL Injection Demonstration)
+
+Enter normal credentials to log in
+
+Try SQL Injection payloads to observe vulnerable behavior
+
+Example payloads:
+
+' OR '1'='1
+admin' AND '1'='1
+admin' AND '1'='2
