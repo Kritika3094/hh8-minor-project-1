@@ -48,11 +48,11 @@ Make sure the following are installed on your system:
 5. Open **phpMyAdmin** in the browser:
    http://localhost/phpmyadmin
 6. Create a new database:
-```sql
-CREATE DATABASE vuln_sandbox;
+   CREATE DATABASE vuln_sandbox;
+
 7.Import the file database.sql to create tables and insert sample data
 
-How to Run the Project
+## How to Run the Project
 
 1. Open VS Code
 
@@ -67,7 +67,7 @@ C:\xampp\htdocs\hh8-minor-project-1
 
 http://localhost/hh8-minor-project-1/login.php
 
-Usage
+## Usage
 Vulnerable Login (SQL Injection Demonstration)
 
 Enter normal credentials to log in
