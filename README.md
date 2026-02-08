@@ -140,13 +140,13 @@ Here you will see:
 ---
 
 ## Project Structure
-
 hh8-minor-project-1/
 │
 ├── login.php → Vulnerable login page
-├── result.php → Vulnerable result
-├── search.php → Error-based SQLi demo
-├── prevention.php → Explanation + secure form
+├── result.php → Vulnerable login result
+├── search.php → Error-based SQL Injection demo
+│
+├── prevention.php → Explanation + secure login form
 ├── secure_result.php → Secure login result
 │
 ├── config.php → Database connection
