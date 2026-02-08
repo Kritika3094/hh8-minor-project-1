@@ -143,19 +143,19 @@ Here you will see:
 
 hh8-minor-project-1
 
-│
+
 ├── login.php → Vulnerable login page
 
 ├── result.php → Vulnerable login result
 
 ├── search.php → Error-based SQL Injection demo
 
-│
+
 ├── prevention.php → Explanation + secure login form
 
 ├── secure_result.php → Secure login result
 
-│
+
 ├── config.php → Database connection
 
 ├── database.sql → Tables & sample data
