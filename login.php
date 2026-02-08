@@ -39,7 +39,7 @@ function showInfo() {
     <form method="POST" action="result.php">
         <input type="text" name="username" placeholder="Enter username" required>
         <input type="text" name="password" placeholder="Enter password" required>
-        <button onclick="showInfo()">Why is this vulnerable?</button>
+        <button onclick="showInfo()">Submit</button>
 
     </form>
 </div>
