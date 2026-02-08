@@ -1,81 +1,154 @@
 # SQL Injection Vulnerability Sandbox
 
-## Description / Overview
-The **SQL Injection Vulnerability Sandbox** is a simple web-based project created to demonstrate how SQL Injection attacks occur in vulnerable web applications and how they can be prevented using secure coding practices.
+## What is this Project?
+This project is a **simple website** created to show:
 
-The project is implemented as a website using **PHP and MySQL**, where certain parts of the application intentionally handle user input insecurely to demonstrate SQL Injection attacks. A secure implementation is also included to show how the same attacks can be prevented.
+1. **How SQL Injection attacks happen**
+2. **How SQL Injection can be prevented**
 
-This project is intended for **educational and learning purposes**.
+It contains:
+- A **vulnerable login page** (attack works)
+- A **secure login page** (attack fails)
+- Explanation of prevention techniques
+
+This project is only for **learning and educational purposes**.
 
 ---
 
-## Features
-- Vulnerable login functionality
-- Demonstration of Error-based SQL Injection
-- Demonstration of Blind SQL Injection (Boolean-based)
-- Secure login using prepared statements
-- Clear comparison between vulnerable and secure implementations
+## What You Will Learn
+- What SQL Injection is
+- How attackers bypass login forms
+- Difference between **vulnerable vs secure code**
+- How prepared statements prevent SQL Injection
+- Basic PHP + MySQL web security concepts
 
 ---
 
 ## Technologies Used
-- **Frontend:** HTML, CSS  
-- **Backend:** PHP  
-- **Database:** MySQL / MariaDB  
-- **Web Server:** Apache (XAMPP)  
-- **Editor:** Visual Studio Code  
-- **Version Control:** Git & GitHub  
+- **HTML / CSS** – page design
+- **PHP** – backend logic
+- **MySQL** – database
+- **Apache (XAMPP)** – server to run PHP
+- **VS Code** – code editor
+- **Git & GitHub** – version control
 
 ---
 
-## Installation / Setup
+## Requirements (Install These First)
 
-### Prerequisites
-Make sure the following are installed on your system:
-- XAMPP (Apache + MySQL)
-- Visual Studio Code
-- Web browser (Chrome / Edge)
+Before running the project, make sure you have:
+
+- **XAMPP** (Apache + MySQL)
+- **VS Code** (optional but recommended)
+- A web browser (Chrome / Edge / Firefox)
 
 ---
 
-### Step-by-Step Setup
+## How to Install & Setup
 
-1. Clone or download the repository from GitHub
-2. Move the project folder to:
-   C:\xampp\htdocs\
-3. Open **XAMPP Control Panel**
-4. Start **Apache** and **MySQL**
-5. Open **phpMyAdmin** in the browser:
-   http://localhost/phpmyadmin
-6. Create a new database:
-   CREATE DATABASE vuln_sandbox;
+### Step 1 – Download the Project
+Download ZIP from GitHub **or** clone the repository.
 
-7.Import the file database.sql to create tables and insert sample data
+---
+
+### Step 2 – Move Project Folder
+Move the project folder to:
+C:\xampp\htdocs\
+
+
+---
+
+### Step 3 – Start Server
+Open **XAMPP Control Panel** and click:
+
+- Start **Apache**
+- Start **MySQL**
+
+Both should turn **green**.
+
+---
+
+### Step 4 – Create Database
+Open browser and go to:
+
+http://localhost/phpmyadmin
+
+
+Then:
+
+1. Click **New**
+2. Create database named:
+
+
+---
+
+### Step 5 – Import Tables
+- Select `vuln_sandbox` database
+- Click **Import**
+- Choose file `database.sql`
+- Click **Go**
+
+Now your database is ready.
+
+---
 
 ## How to Run the Project
 
-1. Open VS Code
-
-2. Click File → Open Folder
-
-3. Select:
-
-C:\xampp\htdocs\hh8-minor-project-1
-
-
-4. Open a browser and run the application:
+Open your browser and type:
 
 http://localhost/hh8-minor-project-1/login.php
 
-## Usage
-Vulnerable Login (SQL Injection Demonstration)
 
-Enter normal credentials to log in
+Press **Enter**.
 
-Try SQL Injection payloads to observe vulnerable behavior
+If you see a login page, the project is running correctly 🎉
 
-Example payloads:
+---
 
+## How to Use the Project
+
+### 1. Vulnerable Login Page
+This page allows SQL Injection.
+
+Try normal login:
+admin / admin123
+
+
+Try SQL Injection payloads:
 ' OR '1'='1
 admin' AND '1'='1
 admin' AND '1'='2
+
+
+Observe:
+- Login bypass
+- Success / failure behavior
+
+---
+
+### 2. Prevention Page
+Go to:
+
+prevention.php
+
+
+Here you will see:
+- Explanation of SQL Injection
+- Secure login form
+- Prepared statement protection
+
+---
+
+## Project Structure
+
+hh8-minor-project-1/
+│
+├── login.php → Vulnerable login page
+├── result.php → Vulnerable result
+├── search.php → Error-based SQLi demo
+├── prevention.php → Explanation + secure form
+├── secure_result.php → Secure login result
+│
+├── config.php → Database connection
+├── database.sql → Tables & sample data
+├── README.md
